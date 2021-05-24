@@ -1,0 +1,11 @@
+@import "../assets/css/reset.scss";
+.main-content {
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 220px;
+  font-size: 26px;
+  color: #333;
+  &.iphoneX{
+    padding-bottom: 280px;
+  }
+}

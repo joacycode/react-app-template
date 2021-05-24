@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta
+      name="App-Config"
+      content="fullscreen=yes,useHistoryState=yes,transition=yes"
+    />
+    <title>title</title>
+    <script>
+      (function() {
+        var docEl = document.documentElement,
+        recalc = function() {
+          var maxWidth = 1025;
+          var visualWidth= 750;
+          var clientWidth = docEl.clientWidth > maxWidth ? maxWidth : docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 100 * (clientWidth / visualWidth) + "px"; 
+        };
+        recalc();
+        if (!document.addEventListener) return;
+        window.addEventListener("resize", recalc, false);
+        window.addEventListener("orientationchange", recalc, false);
+        document.addEventListener("DOMContentLoaded", recalc, false);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

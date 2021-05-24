@@ -1,0 +1,68 @@
+{
+  "name": "trylot",
+  "version": "1.0.0",
+  "description": "试用派样机",
+  "main": "index.js",
+  "repository": "https://coding.jd.com/mkth5-channels/try-loT.git",
+  "author": "zhangxiao774 <zhangxiao15@jd.com>",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.dev.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./build/webpack.config.js",
+    "clean": "rm -rf dist/",
+    "cz": "cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "czinit": "commitizen init cz-conventional-changelog --yarn --dev --exact",
+    "lint": "standard --verbose | snazzy"
+  },
+  "standard": {
+    "global": [],
+    "ignore": [
+      "./dist"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "css-minimizer-webpack-plugin": "^2.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
+    "mini-css-extract-plugin": "^1.4.1",
+    "node-sass": "^5.0.0",
+    "postcss": "7.0.34",
+    "postcss-loader": "^5.2.0",
+    "postcss-px2rem": "^0.3.0",
+    "sass-loader": "^11.0.1",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.3",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "time-stamp": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.31.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "zip-webpack-plugin": "^4.0.1"
+  },
+  "dependencies": {
+    "conventional-changelog-cli": "^2.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
